@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pemesanan Restoran - Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/burger.png">
+</head>
+<body class="light-theme">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="tombolTheme" class="btn-theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="login-wrapper">
+            <!-- Logo dan Brand -->
+            <div class="brand-section">
+                <div class="logo">
+                    <img src="./assets/img/burger.png" alt="logo">
+                    <!-- <i class="fas fa-utensils"></i> -->
+                </div>
+                <h1>Resto & Cafe</h1>
+                <p class="tagline">Ingat Makan Ingat Tuhan</p>
+            </div>
+
+            <!-- Form Login -->
+            <div class="login-card">
+                <div class="card-header">
+                    <h2>Login Waiter</h2>
+                    <p>Masuk untuk memulai melayani pelanggan</p>
+                </div>
+
+                <form id="formLogin" class="login-form">
+                    <div class="form-group">
+                        <label for="namaWaiter">
+                            <i class="fas fa-user"></i>
+                            Nama Waiter
+                        </label>
+                        <input 
+                            type="text" 
+                            id="namaWaiter" 
+                            required 
+                            placeholder="Masukkan nama lengkap Anda"
+                            autocomplete="name"
+                        >
+                        <div class="input-feedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shiftWaiter">
+                            <i class="fas fa-clock"></i>
+                            Pilih Shift Kerja
+                        </label>
+                        <select id="shiftWaiter" required>
+                            <option value="">-- Pilih Shift --</option>
+                            <option value="pagi">🌅 Shift Pagi (06:00 - 14:00)</option>
+                            <option value="siang">☀️ Shift Siang (14:00 - 22:00)</option>
+                            <option value="malam">🌙 Shift Malam (22:00 - 06:00)</option>
+                        </select>
+                        <div class="input-feedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kodeWaiter">
+                            <i class="fas fa-key"></i>
+                            Kode Waiter
+                        </label>
+                        <input 
+                            type="text" 
+                            id="kodeWaiter" 
+                            placeholder="Masukkan kode waiter jika ada"
+                            maxlength="6"
+                        >
+                        <div class="input-feedback"></div>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <span class="btn-text">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Masuk ke Sistem
+                        </span>
+                        <div class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            Memproses...
+                        </div>
+                    </button>
+                </form>
+
+                <div id="pesanNotifikasi" class="notifikasi"></div>
+
+                <!-- Informasi Tambahan -->
+                <div class="info-section">
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data aman tersimpan</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Session auto-logout</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Load JavaScript sebagai module -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

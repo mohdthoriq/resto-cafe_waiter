@@ -1,0 +1,538 @@
+/* ===== CSS VARIABLES untuk THEME ===== */
+:root {
+    /* Light Theme - Warna Baru */
+    --primary-color: #005B41;
+    --primary-hover: #004a35;
+    --secondary-color: #008170;
+    --accent-color: #8DBCC7;
+
+    --bg-primary: #EBFFD8;
+    --bg-secondary: #C4E1E6;
+    --bg-tertiary: #A4CCD9;
+    --bg-quaternary: #8DBCC7;
+
+    --text-primary: #0F0F0F;
+    --text-secondary: #232D3F;
+    --text-muted: #005B41;
+    --text-inverse: #EBFFD8;
+
+    --border-color: #A4CCD9;
+    --border-hover: #8DBCC7;
+    --border-focus: var(--primary-color);
+
+    --success-color: #008170;
+    --warning-color: #e67e22;
+    --error-color: #e74c3c;
+    --info-color: #005B41;
+
+    --shadow-sm: 0 1px 2px 0 rgba(15, 15, 15, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(15, 15, 15, 0.1), 0 2px 4px -1px rgba(15, 15, 15, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(15, 15, 15, 0.1), 0 4px 6px -2px rgba(15, 15, 15, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(15, 15, 15, 0.1), 0 10px 10px -5px rgba(15, 15, 15, 0.04);
+
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+}
+
+/* Dark Theme - Warna Baru */
+.dark-theme {
+    --primary-color: #008170;
+    --primary-hover: #00a085;
+    --secondary-color: #005B41;
+    --accent-color: #232D3F;
+
+    --bg-primary: #0F0F0F;
+    --bg-secondary: #232D3F;
+    --bg-tertiary: #005B41;
+    --bg-quaternary: #008170;
+
+    --text-primary: #EBFFD8;
+    --text-secondary: #C4E1E6;
+    --text-muted: #A4CCD9;
+    --text-inverse: #0F0F0F;
+
+    --border-color: #232D3F;
+    --border-hover: #005B41;
+    --border-focus: var(--primary-color);
+
+    --success-color: #008170;
+    --warning-color: #f39c12;
+    --error-color: #e74c3c;
+    --info-color: #008170;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-x: hidden;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-theme {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-theme:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+/* ===== CONTAINER & LAYOUT ===== */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    width: 100%;
+    align-items: center;
+}
+
+/* ===== BRAND SECTION ===== */
+.brand-section {
+    text-align: center;
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    box-shadow: var(--shadow-xl);
+    transform: rotate(-5deg);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.brand-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* ===== LOGIN CARD ===== */
+.login-card {
+    background: var(--bg-primary);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--border-color);
+    animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.card-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.card-header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* ===== FORM STYLES ===== */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group label i {
+    color: var(--primary-color);
+    width: 16px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 16px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+input:hover,
+select:hover {
+    border-color: var(--border-hover);
+}
+
+input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Input Feedback */
+.input-feedback {
+    margin-top: 5px;
+    font-size: 0.85rem;
+    min-height: 20px;
+    transition: all 0.3s ease;
+}
+
+.input-feedback.error {
+    color: var(--error-color);
+}
+
+.input-feedback.success {
+    color: var(--success-color);
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-login {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 20px 0;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.btn-login.loading {
+    pointer-events: none;
+}
+
+.btn-text,
+.btn-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.btn-login.loading .btn-text {
+    opacity: 0;
+}
+
+.btn-login.loading .btn-loading {
+    opacity: 1;
+}
+
+/* ===== NOTIFIKASI ===== */
+.notifikasi {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.notifikasi.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.notifikasi.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.notifikasi.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-color);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.notifikasi.info {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--info-color);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* ===== INFO SECTION ===== */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.info-item i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+    }
+
+    .btn-theme {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .login-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 400px;
+    }
+
+    .brand-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+        border-radius: 20px;
+    }
+
+    .login-card {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+
+    .card-header h2 {
+        font-size: 1.6rem;
+    }
+
+    input,
+    select,
+    .btn-login {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info-item {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .brand-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visible untuk keyboard navigation */
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
