@@ -1,4 +1,4 @@
-# RestoOrder Pro - Sistem Pemesanan Waiter
+# Resto & Cafe - Sistem Pemesanan Waiter
 
 Aplikasi web modern untuk waiter restoran yang memungkinkan mereka mengelola pesanan pelanggan secara efisien. Aplikasi ini dibangun dengan HTML, CSS, dan JavaScript modern (ES6 Modules) tanpa menggunakan framework eksternal.
 
