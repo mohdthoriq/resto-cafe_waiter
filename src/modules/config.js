@@ -40,7 +40,7 @@ export const dataMenuRestoran = [ // Mengekspor array yang berisi data menu rest
         description: "Minuman tradisional dengan santan, gula merah, dan dawet kenyal",
         price: 12000,
         category: "beverages",
-        image: "assets/img/menu/dawet.jpg",
+        image: "assets/img/menu/Dawet.jpg",
         available: true,
         prep_time: 5,
         spicy_level: 0
@@ -139,7 +139,7 @@ export const dataMenuRestoran = [ // Mengekspor array yang berisi data menu rest
         description: "Sup daging sapi dengan kuah hitam khas Jawa Timur, disajikan dengan tauge dan telur asin",
         price: 28000,
         category: "main_course",
-        image: "assets/img/menu/rawon.jpg",
+        image: "assets/img/menu/Rawon.jpg",
         available: true,
         prep_time: 20,
         spicy_level: 1
@@ -161,7 +161,7 @@ export const dataMenuRestoran = [ // Mengekspor array yang berisi data menu rest
         description: "Nangka muda dimasak santan, disajikan dengan telur, ayam, dan sambal krecek",
         price: 27000,
         category: "main_course",
-        image: "assets/img/menu/gudeg.jpg",
+        image: "assets/img/menu/Gudeg.jpg",
         available: true,
         prep_time: 25,
         spicy_level: 1
@@ -238,7 +238,7 @@ export const dataMenuRestoran = [ // Mengekspor array yang berisi data menu rest
         description: "Tahu goreng isi sayuran dengan sambal kacang pedas",
         price: 8000,
         category: "appetizer",
-        image: "assets/img/menu/tahu-isi.jpg",
+        image: "assets/img/menu/tahu-Isi.jpg",
         available: true,
         prep_time: 7,
         spicy_level: 1
