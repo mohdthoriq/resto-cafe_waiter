@@ -200,15 +200,14 @@ Bagian ini merinci fitur-fitur JavaScript modern yang menjadi tulang punggung ap
         -   **`GET`**: Diwakili oleh `ambilDaftarMenu()`, yang "mengambil" data menu.
         -   **`POST`**: Diwakili oleh `simpanPesanan()` dan `simulasiValidasiServer()`, yang "mengirim" data baru ke server untuk disimpan atau divalidasi.
 
-```
 
-Dokumen `README.md` ini memberikan gambaran lengkap tentang proyek Anda, mulai dari fitur, struktur, hingga cara kerja setiap komponen sistem secara mendetail. Flowchart `mermaid` akan otomatis dirender menjadi diagram visual jika Anda mengunggah proyek ini ke platform seperti GitHub atau GitLab.
 
-<!--
-[PROMPT_SUGGESTION]Bagaimana cara mengimplementasikan filter riwayat pesanan berdasarkan tanggal (Hari Ini, Kemarin)?[/PROMPT_SUGGESTION]
-[PROMPT_SUGGESTION]Jelaskan lebih detail tentang `sessionStorage` vs `localStorage` dan mengapa keduanya digunakan di proyek ini.[/PROMPT_SUGGESTION]
--->
+link untuk tugas: 
 
-```
+*   **`link web:`**     https://resto-cafe-waiter.vercel.app/
+
+*   **`link canva:`**    https://www.canva.com/design/DAG0N0hbxuo/FYDvmGcMuVwn5IA_mhw0_g/edit?utm_content=DAG0N0hbxuo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+---
+
 
 ---
