@@ -207,7 +207,9 @@ link untuk tugas:
 *   **`link web:`**     https://resto-cafe-waiter.vercel.app/
 
 *   **`link canva:`**    https://www.canva.com/design/DAG0N0hbxuo/FYDvmGcMuVwn5IA_mhw0_g/edit?utm_content=DAG0N0hbxuo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+*  **`link presentasi:`** https://youtu.be/NVbdHF_fFD4
 ---
 
 
----
+--- 
